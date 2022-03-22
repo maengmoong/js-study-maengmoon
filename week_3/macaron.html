@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission01</title>
+</head>
+<body>
+    <div class="img">
+        <img src="../img/maca.jpg" alt="마카롱 이미지">
+    </div>
+    <div class=qBox>
+        <p class="question">
+          영희는 자바스크립트 스터디 모임에서 6명의 친구들에게 줄 마카롱을 각각
+          2개씩 주기로 했습니다.
+        </p>
+        <p>마카롱이 몇 개가 필요할 지 스크립트를 작성하기로 했습니다.</p>
+        <p>그런데 정부 지침이 바뀌면서 2명이 더 오게 되었습니다.</p>
+        <p>
+          지나가다 이 코드를 본 철수가 코드에 문제가 있어 보인다고 조언을
+          해주었습니다.
+        </p>
+        <p>영희는 코드를 어떻게 변경해야 할까요?</p>
+        <hr />
+        <p>영희가 준비해야 할 마카롱: <span id="macaroon_num">0</span>개</p>
+    </div>
+
+    <script>
+      var studian = 6;
+      var extra = 2;
+
+      // 철수가 아래 코드에 문제가 있다고 말했습니다.
+      var macaroon = (studian + extra) * 2;
+
+      document.getElementById('macaroon_num').innerText = macaroon;
+    </script>
+</body>
+</html>
