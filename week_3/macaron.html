@@ -5,25 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mission01</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            height: 100vh;
+        }
+        .wrapper{
+            margin:0 auto;
+            background-color: rgb(248, 248, 248);
+            border-radius: 30px;
+            display: flex;
+            padding: 3%;
+            font-family: 'Noto Sans KR', sans-serif;
+            width: 70%;
+            color: rgb(83, 83, 83);
+            font-size: 16px;
+            max-height: 800px;
+            align-items: center;
+        }
+
+        .img{
+            min-width:400px;
+            min-height: 400px;
+            height: 400px;
+            width: 400px;
+            background: url(img/maca.jpg) no-repeat center center;
+            background-size: cover;
+            border-radius: 100%;
+        }
+
+        .qBox{
+            padding-left: 5%;
+            line-height: 1.6;
+        }
+
+        .qBox span.qna{
+            font-size: 50px;
+            font-weight: bold;
+            top: 0;
+            left: 0;
+            color: rgba(111, 193, 247, 0.164);
+            position: absolute;
+            font-size: 80px;
+            display: inline-block;
+            top: -40px;
+            left: -40px;
+        }
+
+        .question{
+            border-bottom: 1px solid rgb(219, 219, 219);
+            padding-bottom: 30px;
+            position: relative;
+        }
+
+        .answer{
+            position: relative;
+            margin-top: 30px;
+        }
+
+        @media (max-width:1120px) {
+            .wrapper{
+                flex-direction: column;
+                padding:6%;
+                min-width: 470px;
+            }
+            .img{
+                margin: auto;
+            }
+            
+         }
+ 
+
+    </style>
 </head>
 <body>
-    <div class="img">
-        <img src="../img/maca.jpg" alt="마카롱 이미지">
-    </div>
-    <div class=qBox>
-        <p class="question">
-          영희는 자바스크립트 스터디 모임에서 6명의 친구들에게 줄 마카롱을 각각
-          2개씩 주기로 했습니다.
-        </p>
-        <p>마카롱이 몇 개가 필요할 지 스크립트를 작성하기로 했습니다.</p>
-        <p>그런데 정부 지침이 바뀌면서 2명이 더 오게 되었습니다.</p>
-        <p>
-          지나가다 이 코드를 본 철수가 코드에 문제가 있어 보인다고 조언을
-          해주었습니다.
-        </p>
-        <p>영희는 코드를 어떻게 변경해야 할까요?</p>
-        <hr />
-        <p>영희가 준비해야 할 마카롱: <span id="macaroon_num">0</span>개</p>
+    <div class="wrapper">
+        <div class="img"></div>
+        <div class=qBox>
+            <p class="question">
+                <span class="qna">Q</span><br>
+              &nbsp;&nbsp;영희는 자바스크립트 스터디 모임에서 6명의 친구들에게 줄 마카롱을 각각
+              2개씩 주기로 했습니다. 마카롱이 몇 개가 필요할 지 스크립트를 작성하기로 했습니다. 그런데 정부 지침이 바뀌면서 2명이 더 오게 되었습니다.
+                <br><br>
+              지나가다 이 코드를 본 철수가 코드에 문제가 있어 보인다고 조언을
+              해주었습니다. <br><br>
+              영희는 코드를 어떻게 변경해야 할까요?
+            </p>
+            <p class="answer">
+                <span class="qna">A</span><br>
+                영희가 준비해야 할 마카롱: <span id="macaroon_num">0</span>개
+            </p>
+        </div>
     </div>
 
     <script>
