@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>five plus</title>
+</head>
+<body>
+    <h1>fivePlus</h1>
+    <form id="fivePlusForm">
+      <div>
+        <label for="firstNum">
+          <input id="firstNum" type="text" placeholder="숫자를 입력하세요" />
+        </label>
+      </div>
+      <div>
+        <label for="defaultNum">
+          <input id="defaultNum" type="text" value="5" disabled />
+        </label>
+      </div>
+      <div>
+        <button type="submit">add</button>
+      </div>
+      <div>
+        <span>더한 값:</span>
+        <span id="result">0</span>
+      </div>
+    </form>
+    <hr />
+    <div>
+      <p>
+        원하는 결과값이 나오지 않고 있네요.<br />
+        스크립트 코드를 보고 해결해봅시다!
+      </p>
+    </div>
+    <script>
+      var fivePlusForm = document.getElementById('fivePlusForm');
+      var firstNum = parseInt(document.getElementById('firstNum').value);
+      var defaultNum = parseInt(document.getElementById('defaultNum').value);
+      var result = document.getElementById('result');
+      fivePlusForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        console.log(firstNum, typeof firstNum);
+        console.log(defaultNum, typeof defaultNum);
+
+        var resultNum = firstNum + defaultNum;
+
+        result.innerText = resultNum;
+      });
+    </script>
+</body>
+</html>
