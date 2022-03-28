@@ -36,14 +36,13 @@
     </div>
     <script>
       var fivePlusForm = document.getElementById('fivePlusForm');
-      var firstNum = parseInt(document.getElementById('firstNum').value);
-      var defaultNum = parseInt(document.getElementById('defaultNum').value);
       var result = document.getElementById('result');
+      
       fivePlusForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        console.log(firstNum, typeof firstNum);
-        console.log(defaultNum, typeof defaultNum);
+        var firstNum = parseInt(document.getElementById('firstNum').value);
+        var defaultNum = parseInt(document.getElementById('defaultNum').value);
 
         var resultNum = firstNum + defaultNum;
 
