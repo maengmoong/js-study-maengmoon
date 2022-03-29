@@ -7,38 +7,41 @@
     <title>문자열 다루기</title>
 </head>
 <body>
-    <h1>문자열 나누기</h1>
-    <div>
-      <h3 id="deco_name">*_달야_*</h3>
-    </div>
-    <hr />
-    <div>
-      <p>*_달야_ ==> 달야</p>
-      <button id="slice_btn">나누기</button>
-    </div>
-    <br />
-    <div>
-      <span>이름: </span>
-      <span id="slice_name"></span>
-    </div>
-    <div>
-      <span>길이: </span>
-      <span id="len_name"></span>
-    </div>
+  <h1>문자열 나누기</h1>
+  <div>
+    <h3 id="deco_name">*_달야_*</h3>
+  </div>
+  <hr />
+  <div>
+    <p>*_달야_ ==> 달야</p>
+    <button id="slice_btn">나누기</button>
+  </div>
+  <br />
+  <div>
+    <span>이름: </span>
+    <span id="slice_name"></span>
+  </div>
+  <div>
+    <span>길이: </span>
+    <span id="len_name"></span>
+  </div>
 
-    <script>
-      var decoName = document.getElementById('deco_name');
-      var sliceName = document.getElementById('slice_name');
-      var lenName = document.getElementById('len_name');
-      var sliceBtn = document.getElementById('slice_btn');
+  <script>
+    var decoName = document.getElementById('deco_name').innerText;//inerText(innerHTML)가 없으면 값이 아닌 태그 전체가 가져와진다
+    var sliceName = document.getElementById('slice_name');
+    var lenName = document.getElementById('len_name');
+    var sliceBtn = document.getElementById('slice_btn');
 
-      sliceBtn.addEventListener('click', () => {
-        var name = '달야';
-        var length = name.length;
+    sliceBtn.addEventListener('click', () => {
+      // null 을 지우고 내용을 작성해 주세요.
+      var name = decoName.slice(2,4);//인덱스 2번 ~ 종료위치인 인덱스4번의 바로 앞 글자
+      var length = null; 
+      // ----------------------------------
 
-        sliceName.innerText = name;
-        lenName.innerText = length;
-      });
+      sliceName.innerText = name;
+      lenName.innerText = name.length;
+    });
+  </script>
     </script>
 </body>
 </html>
