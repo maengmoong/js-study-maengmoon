@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission1 Array</title>
+</head>
+<body>
+    <h1>자바스크립트 배열(Array)</h1>
+    <script>
+      // 배열 다루기
+      var fruits = ['apple', 'banana', 'melon', 'berry'];
+
+      // 길이
+      console.log(fruits.length); // 4
+
+      // 인덱스
+      console.log(fruits[3]); // 'berry'
+
+      // push: 맨 뒤 배열요소에 값 추가
+      fruits.push('orange');
+      console.log(fruits); // ['apple', 'banana', 'melon', 'berry', 'orange']
+
+   
+      // pop: 맨 뒤 배열요소 삭제
+      fruits.pop();
+      console.log(fruits); // ['apple', 'banana', 'melon', 'berry']
+      document.write(fruits);
+
+      // unshift: 맨 앞에 배열요소 추가
+      fruits.unshift('cherry');
+      console.log(fruits); // ['cherry', 'apple', 'banana', 'melon', 'berry']
+
+      // shift: 맨 앞 배열요소 삭제
+      fruits.shift();
+      console.log(fruits); // ['apple', 'banana', 'melon', 'berry']
+
+      // 배열 결합하기: 두 가지 배열 결합
+      var extraFruits = ['lemon', 'kiwi'];
+      var extendFruits = fruits.concat(extraFruits);
+      console.log(extendFruits); // ['apple', 'banana', 'melon', 'berry', 'lemon', 'kiwi']
+
+      // random: 난수(랜덤수) 추출하기 범위를 넓히고 싶을 땐 ex) Math.random()*4 --> 0~4까지로 범위 수정된다
+      var randomNum = Math.random();
+      console.log(randomNum); // 0 ~ 1미만
+
+      // 소수점 이하 버리기
+      var floorNum = Math.floor(3.1231003948);
+      console.log(floorNum); // 3
+
+    </script>
+  </body>
+</html>

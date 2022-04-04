@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array mission1</title>
+</head>
+<body>
+    <h1>랜덤 점심 메뉴 고르기</h1>
+    <p>아래 버튼을 누르면 랜덤으로 점심 메뉴를 출력해 주세요</p>
+    <button id="launch-btn">점심</button>
+    <script>
+
+      // 점심 메뉴
+      var launch = ['사이다', '볶음밥', '짜장면', '햄버거'];
+
+      // '라면'을 추가해 주세요
+      launch.push('라면');
+
+      // '사이다'를 제거해 주세요
+      launch.shift();
+
+      // 추가 메뉴를 하나로 합쳐 주세요
+      var extraLaunch = ['짬뽕', '쌀국수'];
+      var launch = launch.concat(extraLaunch);
+
+      var launchBtn = document.getElementById('launch-btn');
+      launchBtn.addEventListener('click', function () {
+        // 랜덤 함수와 배열 길이를 활용해서 메뉴를 선택하는 로직을 작성해 보세요
+        var randomNum = Math.floor(Math.random()*launch.length);
+        console.log('오늘의 점심 메뉴는?', launch[randomNum]);
+ 
+      });
+    </script>
+  </body>
+</html>
