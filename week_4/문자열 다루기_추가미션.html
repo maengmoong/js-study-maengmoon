@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 다루기_추가미션</title>
+</head>
+<body>
+    <div>
+        <h5>👉 문장 전체를 대문자로 변경해 주세요</h5>
+        <span id="change-one">change capital</span>
+        <span class="result"></span>
+      </div>
+      <hr />
+      <div>
+        <h5>👉 모든 'c' -> 'C'(대문자)로 변경해 주세요</h5>
+        <span id="change-two">change capital</span>
+        <span class="result"></span>
+      </div>
+      <hr />
+      <div>
+        <h5>👉 문장을 거꾸로 변경해 주세요</h5>
+        <span id="change-three">change capital</span>
+        <span class="result"></span>
+      </div>
+    </div>
+    <script>
+      var one = document.getElementById('change-one');
+      var two = document.getElementById('change-two');
+      var three = document.getElementById('change-three');
+      
+      //전체 대문자
+      one.innerText = one.innerText.toUpperCase();
+
+      //c대문자
+      two.innerText = two.innerText.replace(/c/gi,'C');
+      
+      //거꾸로
+      three.innerText = three.innerText.split("").reverse().join("");
+    </script>
+</body>
+
+</html>
