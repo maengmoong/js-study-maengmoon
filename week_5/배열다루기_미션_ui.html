@@ -1,0 +1,140 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array mission1</title>
+    <style>
+        @font-face {
+        font-family: 'BMDOHYEON';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        *{margin: 0; padding: 0;text-align: center;}
+
+        body{
+            background-color: rgb(42, 193, 188);;
+        }
+
+        .randomBox{
+            border: 1px solid rgb(233, 233, 233);
+            box-shadow: 2px 5px 10px 5px rgba(128, 128, 128, 0.562);
+            display: inline-block;
+            padding: 100px 80px;
+            position: relative;
+            top: 150px;
+            font-family: 'BMDOHYEON';
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        .randomBox h1{
+            color: rgb(80, 80, 80);
+            font-weight: 500;
+        }
+
+        .menu{
+            margin-top: 80px;
+            line-height: 1.8;
+        }
+
+        .menu span{
+            font-weight: 800;
+            font-size: 35px;
+            color: transparent;
+            border: 2px solid rgb(42, 193, 188);
+            transition: all .1s;
+            padding: 5px 10px;
+        }
+
+        p{
+            margin-top: 50px;
+            color: rgb(80, 80, 80);
+            font-weight: 300;
+        }
+
+        #launch-btn{
+            border: none;
+            outline: none;
+            padding:20px 80px; 
+            border-radius:30px; 
+            background-color:rgb(42, 193, 188);
+            border-top: 1px solid white; 
+            box-shadow: 2px 5px 10px 5px rgba(128, 128, 128, 0.233);
+            margin-top: 30px;
+            font-size: 18px;
+            color: rgb(247, 247, 247);
+            cursor: pointer;
+            transition: all .2s;
+            letter-spacing: 0.5px;
+            font-weight: 100;
+            font-family: 'BMDOHYEON';
+
+        }
+
+        #launch-btn:hover{
+            background-color: rgb(100, 211, 207);
+        }
+
+        .ico-img{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: url(../week_5/img/ic-baemin.png) no-repeat center center;
+            background-size: cover;
+            animation: move linear infinite 2s;
+        }
+
+        @keyframes move{
+            to{
+                transform: translateX(-500px);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="randomBox">
+        <h1>랜덤 점심 메뉴 고르기</h1>
+        <p>버튼을 누르면 점심 메뉴를 골라드립니다!</p>
+        <button id="launch-btn">점심 골라보기</button>
+        <div class="menu">오늘의 점심메뉴는<br><span id="randomMenu">짜장면</span> 어떠세요?</div>
+        <div class="ico-img">
+
+        </div>
+    </div>
+    <script>
+
+      // 점심 메뉴
+      var launch = ['사이다', '볶음밥', '짜장면', '햄버거'];
+
+      // '라면'을 추가해 주세요
+      launch.push('라면');
+
+      // '사이다'를 제거해 주세요
+      launch.shift();
+
+      // 추가 메뉴를 하나로 합쳐 주세요
+      var extraLaunch = ['짬뽕', '쌀국수'];
+      var launch = launch.concat(extraLaunch);
+
+      var launchBtn = document.getElementById('launch-btn');
+      var menu = document.getElementsByClassName('menu').innerHTML;
+
+      launchBtn.addEventListener('click', function () {
+        var randomNum = Math.floor(Math.random()*launch.length);
+
+        var menu = document.getElementById('randomMenu');
+        menu.style.color = "#64D3CF";
+        menu.style.border = "none";
+        menu.innerText = launch[randomNum];
+      });
+    </script>
+  </body>
+</html>
